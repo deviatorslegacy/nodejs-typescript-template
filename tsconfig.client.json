@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "outDir": "./public/dist/js",
+    "rootDir": "./src/client",
+    "strict": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+      "./src/client/*"
+  ]
+}
