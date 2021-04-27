@@ -4,12 +4,10 @@
   "description": "A quickstart template for a typescript project for both the client-side and server-side.",
   "main": "./dist/server.js",
   "scripts": {
-    "build-server:dev": "tsc --project ./tsconfig.server.json --watch",
-    "build-server:prod": "tsc --project ./tsconfig.server.json",
-    "build-client:dev": "tsc --project ./tsconfig.client.json --watch",
-    "build-client:prod": "tsc --project ./tsconfig.client.json",
-    "build-styles:dev": "sass --watch src/styles:public/dist/css",
-    "build-styles:prod": "sass src/styles:public/dist/css",
+    "build": "run-p build-server build-client build-styles",
+    "build-server": "tsc --watch --project ./tsconfig.server.json",
+    "build-client": "tsc --watch --project ./tsconfig.client.json",
+    "build-styles": "sass --watch src/styles:public/dist/css",
     "start:dev": "nodemon",
     "start:prod": "node ./dist/server.js"
   },
@@ -23,6 +21,7 @@
     "@types/socket.io": "^2.1.13",
     "@types/socket.io-client": "^1.4.36",
     "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
     "typescript": "^4.2.3"
   },
   "dependencies": {

@@ -10,16 +10,13 @@ but does use [Typescript][0], [Express.js][1], [Embedded Javascript][2],
 
 ## NPM Scripts
 
-Call these with `npm run [command]` 
+Call these with `npm run [command]`  
 
-- `build-server:dev`: `tsc` builds server-side code, using `--watch` flag.
-- `build-server:prod`: `tsc` builds server-side code (once).
-
-- `build-client:dev`: `tsc` builds client-side code, using `--watch` flag.
-- `build-client:prod`: `tsc` builds client-side code (once).
-
-- `build-sass:dev`: `sass` builds stylesheets, using `--watch` flag.
-- `build-sass:prod`: `sass` builds stylesheets (once).
+- `build`: run all build commands in parallel, with `run-p` 
+  (from [`npm-run-all`][6])
+- `build-server`: `tsc` builds server-side code, using `--watch` flag.
+- `build-client`: `tsc` builds client-side code, using `--watch` flag.
+- `build-sass`: `sass` builds stylesheets, using `--watch` flag.
 
 ## Directory Structure
 
@@ -56,3 +53,4 @@ public/dist (from root project directory)
 [3]: https://socket.io/
 [4]: https://sass-lang.com/
 [5]: https://github.com/deviatorslegacy/
+[6]: https://npmjs.org/package/npm-run-all/
